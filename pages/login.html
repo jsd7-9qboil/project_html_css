@@ -7,8 +7,77 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <div class="my-2 mx-4"></div>
+            <nav>
+                <ul class="flex gap-12 px-2 py-2 justify-center">
+                    <li class="hover:text-slate-600 hover:underline">
+                        <a href="#" target="_blank">หน้าแรก</a>
+                    </li>
+                    <li class="hover:text-slate-600 hover:underline">
+                        <a href="#" target="_blank">สินค้า</a>
+                    </li>
+                    <li class="hover:text-slate-600 hover:underline">
+                        <a href="#" target="_blank">ดูดวง</a>
+                    </li>
+                    <li class="hover:text-slate-600 hover:underline">
+                        <a href="#" target="_blank">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="my-8">
+            <img src="" alt="" class="justify-center">
+            <h1 class="text-3xl text-bold text-center">mutayloo</h1>
+        </div>
+        <div class="my-8">
+            <h1 class="text-3xl text-bold text-center">บัญชีของฉัน</h1>
+        </div>
+    </header>
+    <main class="grid grid-cols-2 my-20 mx-40 gap-20">
+        <div class="border-2 border-violet-500 rounded-tr-lg rounded-bl-lg py-8 px-8 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] shadow-gray-600">
+            <div class="text-left">
+                <h2 class="text-bold text-xl pl-6">เข้าสู่ระบบ</h2>
+            </div>
+            <div class="text-left pt-6 text-center">
+                <h4 class="text-bold py-4 text-left pl-6">ชื่อผู้ใช้ หรืออีเมล์</h4>
+                <input type="text" type="email" class="border-2 border-violet-900 hover:border-violet-400 rounded px-20 py-2">
+            </div>
+            <div class="text-center">
+                <h4 class="text-bold py-4 text-left pl-6">รหัสผ่าน</h4>
+                <input type="text" type="email" class="border-2 border-violet-900 hover:border-violet-400 rounded px-20 py-2">
+            </div>
+            <div class="text-left pt-6 flex pl-6">
+                <input type="checkbox" class="border-2 border-violet-900 hover:border-violet-400 rounded">
+                <h4 class="text-bold px-2">จำฉันไว้</h4>
+            </div>
+            <div class="py-6 flex pl-6">
+                <div>
+                    <button class="bg-violet-500 px-6 py-2 rounded hover:text-white"><a href="#">เข้าสู่ระบบ</a></button>
+                </div>
+                <div class="py-3 px-6">
+                    <a href="#" >ลืมรหัสผ่าน?</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 border-violet-500 rounded-tr-lg rounded-bl-lg py-8 px-8 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] shadow-gray-600">
+            <div class="text-left">
+                <h2 class="text-bold text-xl pl-6">สมัครสมาชิก</h2>
+            </div>
+            <div class="text-center pt-6">
+                <h4 class="text-bold py-4 text-left pl-6">อีเมล์</h4>
+                <input type="text" type="email" class="border-2 border-violet-900 hover:border-violet-400 rounded px-20 py-2">
+            </div>
+            <div class="py-6 text-center">
+                <button class="bg-violet-500 px-6 py-2 rounded hover:text-white"><a href="#">สมัครสมาชิก</a></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="flex justify-end border-slate-200">
+            <p class="py-10 px-20">©️ 2024 Mutayloo by 9qboil</p>
+        </div>
+    </footer>
     
 </body>
 </html>

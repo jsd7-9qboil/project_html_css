@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- Header -->
-    <header class="flex justify-between bg-blue-500 py-4">
+    <header>
       <div>
         <h1>Mutayloo</h1>
       </div>
       <nav>
-        <ul class="flex gap-4">
-          <li>menu1</li>
-          <li>menu2</li>
-          <li>menu3</li>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </nav>
     </header>
@@ -26,11 +31,8 @@
     <!-- Main -->
     <main>
       <!-- hero -->
-      <section class="bg-gray-200">
-        <div class="container mx-auto flex justify-between">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-          <img src="https://picsum.photos/400" alt="" />
-        </div>
+      <section>
+        <div></div>
       </section>
 
       <!-- Carousel -->
@@ -40,13 +42,75 @@
       <section></section>
 
       <!-- Testimonials -->
-      <section></section>
+      <section-testimonials>
+        <div class="flex items-center">
+          <div class="px-4 py-4 rounded w-2/5 lg:w-2/5">
+            <img
+              src="./assets/images/testimonial-removebg-preview.png"
+              alt="Testimonials"
+            />
+          </div>
+          <div class="rounded-tr-lg rounded-bl-lg w-3/5 lg:w1/2">
+            <h1
+              class="text-center md:px-10 md:pt-10 md:mx-10 lg:px-20 lg:py-20 lg:mx-20 px-2 pt-2 border-4 border-double border-violet-400 rounded-tr-[20%] rounded-bl-[20%] pb-4 mt-4 mx-4"
+            >
+              "รู้สึกว่าตั้งแต่ได้น้องมาก็มีโหวงเฮ้งเรื่องการงานและการเงินมากขึ้นครับ
+              อยากบอกว่าน้องสวยและทันสมัยมากๆเลยครับ
+              อยากได้น้องในหลายๆคอลเลคชั่นเลยครับ"<br />-คุณคิว-
+            </h1>
+          </div>
+        </div>
+      </section-testimonials>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-orange-100">
-      <div class="grid grid-cols-3 gap-4 pb-8">
-        <div class="text-left mx-20">
+    <footer class="lg:hidden">
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-200 ml-2 my-4 mr-20"
+      >
+        <div class="collapse-title font-medium">ลิงค์</div>
+        <div class="collapse-content">
+          <p>หน้าแรก</p>
+          <p>สินค้า</p>
+          <p>ดูดวง</p>
+          <p>ติดต่อเรา</p>
+        </div>
+      </div>
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-200 ml-2 my-4 mr-20"
+      >
+        <div class="collapse-title font-medium">ช่วยเหลือ</div>
+        <div class="collapse-content">
+          <p>การสั่งซื้อและการชำระเงิน</p>
+          <p>ติดตามสถานะสินค้า</p>
+          <p>เปลี่ยนสินค้า</p>
+          <p>ตารางวัดขนาดแหวน</p>
+        </div>
+      </div>
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-200 ml-2 my-4 mr-20"
+      >
+        <div class="collapse-title font-medium">จดหมายข่าวสาร</div>
+        <div class="collapse-content">
+          <p>ลงทะเบียนเพื่อรับข่าวสาร</p>
+          <input
+              type="email"
+              placeholder="email@example"
+              class="border-2 border-slate-200 hover:border-red-200"
+            />
+            <button type="submit" class="bg-gray-400 px-2 hover:text-slate-300">
+              ติดตามข่าวสาร
+            </button>
+        </div>
+      </div>
+    </footer>
+    <!-- lg -->
+    <footer class="hidden lg:block">
+      <div class="grid grid-cols-3 gap-2 pb-8">
+        <div class="text-left mx-10">
           <div class="text-slate-500">
             <h3 class="font-bold py-4">ลิงค์</h3>
           </div>
@@ -88,7 +152,7 @@
             </ul>
           </div>
         </div>
-        <div class="text-left">
+        <div class="text-left mr-4">
           <div class="text-slate-500">
             <h3 class="font-bold py-4">จดหมายข่าวสาร</h3>
           </div>
@@ -100,7 +164,8 @@
             <input
               type="email"
               placeholder="email@example"
-              class="border-2 border-slate-200 hover:border-red-200"/>
+              class="border-2 border-slate-200 hover:border-red-200"
+            />
             <button type="submit" class="bg-gray-400 px-2 hover:text-slate-300">
               ติดตามข่าวสาร
             </button>
@@ -109,20 +174,26 @@
       </div>
       <div class="flex justify-between border-slate-200">
         <div class="flex gap-2 ml-20">
-          <a href="https://m.facebook.com/login/?locale=th_TH" target="_blank"><img
+          <a href="https://m.facebook.com/login/?locale=th_TH" target="_blank"
+            ><img
               src="/assets/icon/facebook-color-svgrepo-com.svg"
               alt="facebookicon"
-              class="w-8"/></a>
+              class="w-8"
+          /></a>
           <a
             href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fscope%3Dopenid%2Bprofile%2Bfriends%2Bgroups%2Btimeline.post%2Bmessage.write%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsocial-plugins.line.me%252Fwidget%252FloginCallback%253FreturnUrl%253Dhttps%25253A%25252F%25252Fsocial-plugins.line.me%25252Fwidget%25252Fclose%26state%3D9fec98665820574ebc349f47d089a6%26client_id%3D1446101138&loginChannelId=1446101138#/"
-            target="_blank"><img
+            target="_blank"
+            ><img
               src="/assets/icon/line-svgrepo-com.svg"
               alt="facebookicon"
-              class="w-8"/></a>
-          <a href="https://twitter.com/i/flow/login" target="_blank"><img
+              class="w-8"
+          /></a>
+          <a href="https://twitter.com/i/flow/login" target="_blank"
+            ><img
               src="/assets/icon/twitter-svgrepo-com.svg"
               alt="facebookicon"
-              class="w-8"/></a>
+              class="w-8"
+          /></a>
         </div>
         <div>
           <p class="py-4 px-20">©️ 2024 Mutayloo by 9qboil</p>

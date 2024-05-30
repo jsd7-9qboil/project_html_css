@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              text: {
+                50: "#e5e5ff",
+                100: "#ccccff",
+                200: "#9999ff",
+                300: "#6666ff",
+                400: "#3333ff",
+                500: "#0000ff",
+                600: "#0000cc",
+                700: "#000099",
+                800: "#000066",
+                900: "#000033",
+                950: "#00001a",
+              },
+              background: {
+                50: "#f2f2f2",
+                100: "#e6e6e6",
+                200: "#cccccc",
+                300: "#b3b3b3",
+                400: "#999999",
+                500: "#808080",
+                600: "#666666",
+                700: "#4d4d4d",
+                800: "#333333",
+                900: "#1a1a1a",
+                950: "#0d0d0d",
+              },
+              primary: {
+                50: "#fff7e5",
+                100: "#ffeecc",
+                200: "#ffdd99",
+                300: "#ffcc66",
+                400: "#ffbb33",
+                500: "#ffaa00",
+                600: "#cc8800",
+                700: "#996600",
+                800: "#664400",
+                900: "#332200",
+                950: "#1a1100",
+              },
+              secondary: {
+                50: "#f7eafb",
+                100: "#eed5f6",
+                200: "#deabed",
+                300: "#cd81e4",
+                400: "#bc57db",
+                500: "#ac2dd2",
+                600: "#8924a8",
+                700: "#671b7e",
+                800: "#451254",
+                900: "#22092a",
+                950: "#110415",
+              },
+              accent: {
+                50: "#fff9e5",
+                100: "#fff4cc",
+                200: "#ffe999",
+                300: "#ffde66",
+                400: "#ffd333",
+                500: "#ffc800",
+                600: "#cca000",
+                700: "#997800",
+                800: "#665000",
+                900: "#332800",
+                950: "#1a1400",
+              },
+            },
+            fontSize: {
+              sm: "0.750rem",
+              base: "1rem",
+              xl: "1.333rem",
+              "2xl": "1.777rem",
+              "3xl": "2.369rem",
+              "4xl": "3.158rem",
+              "5xl": "4.210rem",
+            },
+            fontWeight: {
+              normal: "400",
+              bold: "700",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body data-theme="light">
+    <!-- Navbar -->
+    <header>
+      <div class="navbar bg-base-100 hidden md:flex">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Homepage</a></li>
+              <li>
+                <a>Shop</a>
+                <ul class="p-2">
+                  <li><a>Products</a></li>
+                  <li><a>Horoscope</a></li>
+                  <li><a>Custom Fate</a></li>
+                </ul>
+              </li>
+              <li><a>Contact</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">MutayLoo</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Homepage</a></li>
+            <li>
+              <details>
+                <summary>Shop</summary>
+                <ul class="p-2">
+                  <li><a>Products</a></li>
+                  <li><a>Horoscope</a></li>
+                  <li><a>Custom Fate</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>Contact</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                <span class="badge badge-sm indicator-item">8</span>
+              </div>
+            </div>
+            <div
+              tabindex="0"
+              class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+            >
+              <div class="card-body">
+                <span class="font-bold text-lg">8 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--!Nav mobile-->
+      <div class="navbar bg-base-100 md:hidden">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Homepage</a></li>
+              <li><a>Shop</a></li>
+              <li><a>Horoscope</a></li>
+              <li><a>Contact</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-xl">MutayLoo</a>
+        </div>
+        <div class="navbar-end">
+          <button class="btn btn-square btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </button>
+          <button class="btn btn-square btn-ghost ml-2">
+            <div class="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                ></path>
+              </svg>
+              <span class="badge badge-sm indicator-item">8</span>
+            </div>
+          </button>
+          <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost btn-circle avatar"
+              >
+                <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                </div>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--!Main-->
+    <main>
+      <!-- Search -->
+      <section class="my-4 px-4 md:hidden">
+        <div class="container mx-auto">
+          <label class="input input-bordered flex items-center gap-2">
+            <input type="text" class="grow" placeholder="Search" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="w-4 h-4 opacity-70"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+        </div>
+      </section>
+
+      <!-- Title + Filter -->
+      <section class="my-4 px-4">
+        <div class="container mx-auto">
+          <!-- Breadcrumbs -->
+          <div class="text-sm breadcrumbs">
+            <ul>
+              <li><a class="font-medium">All Product</a></li>
+              <li><a class="font-medium">Category A</a></li>
+            </ul>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-2xl font-bold uppercase pt-2">Product cate A</h1>
+          <p class="text-slate-500">Lorem ipsum dolor sit amet.</p>
+
+          <!-- Filter -->
+          <div class="py-6 w-full flex gap-2">
+            <div class="badge bg-primary-500">Filter A</div>
+            <div class="badge bg-secondary-500 text-white">Filter A</div>
+            <div class="badge bg-secondary-500 text-white">Filter A</div>
+          </div>
+
+          <!-- Products gird -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 pb-8">
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="https://via.placeholder.com/300x300" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

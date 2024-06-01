@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Card</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+      * {
+      font-family: "Kanit", sans-serif;
+    }
+    </style>
+    
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              text: {
+                50: "#e5e5ff",
+                100: "#ccccff",
+                200: "#9999ff",
+                300: "#6666ff",
+                400: "#3333ff",
+                500: "#0000ff",
+                600: "#0000cc",
+                700: "#000099",
+                800: "#000066",
+                900: "#000033",
+                950: "#00001a",
+              },
+              background: {
+                50: "#f2f2f2",
+                100: "#e6e6e6",
+                200: "#cccccc",
+                300: "#b3b3b3",
+                400: "#999999",
+                500: "#808080",
+                600: "#666666",
+                700: "#4d4d4d",
+                800: "#333333",
+                900: "#1a1a1a",
+                950: "#0d0d0d",
+              },
+              primary: {
+                50: "#fff7e5",
+                100: "#ffeecc",
+                200: "#ffdd99",
+                300: "#ffcc66",
+                400: "#ffbb33",
+                500: "#ffaa00",
+                600: "#cc8800",
+                700: "#996600",
+                800: "#664400",
+                900: "#332200",
+                950: "#1a1100",
+              },
+              secondary: {
+                50: "#f7eafb",
+                100: "#eed5f6",
+                200: "#deabed",
+                300: "#cd81e4",
+                400: "#bc57db",
+                500: "#ac2dd2",
+                600: "#8924a8",
+                700: "#671b7e",
+                800: "#451254",
+                900: "#22092a",
+                950: "#110415",
+              },
+              accent: {
+                50: "#fff9e5",
+                100: "#fff4cc",
+                200: "#ffe999",
+                300: "#ffde66",
+                400: "#ffd333",
+                500: "#ffc800",
+                600: "#cca000",
+                700: "#997800",
+                800: "#665000",
+                900: "#332800",
+                950: "#1a1400",
+              },
+            },
+            fontSize: {
+              sm: "0.750rem",
+              base: "1rem",
+              xl: "1.333rem",
+              "2xl": "1.777rem",
+              "3xl": "2.369rem",
+              "4xl": "3.158rem",
+              "5xl": "4.210rem",
+            },
+            fontWeight: {
+              normal: "400",
+              bold: "700",
+            },
+          },
+        },
+      };
+    </script>
+      </head>
+      
+      <body>
+        <div id="whole-page" class="gap-4 bg-primary-200 md:flex md:justify-center">
+          <div class="my-8 ml-4 bg-primary-100 md:flex md:flex-row-reverse rounded-xl">
+            <!-- Bracelet Image Section -->
+            <div class="flex flex-col justify-center md:w-full">
+              <div class="flex flex-col justify-center px-3.5 max-w-[332px] mx-auto md:mx-0">
+                <div class="flex flex-col justify-center pt-3.5 rounded-tr-[40%] rounded-bl-[40%] border-2 border-fuchsia-700 border-solid bg-zinc-300 bg-opacity-0">
+                  <div class="flex z-10 flex-col rounded-tr-[40%] rounded-bl-[40%] pt-3 pr-5 pb-8 pl-14 -mb-3 -ml-3 w-full bg-amber-400 rounded-none bg-opacity-30">
+                    <img class="rounded-tr-[40%] rounded-bl-[40%] bg-opacity-[30%]" src="./../assets/images/bracelet-1.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Bracelet Thumbnails Section -->
+            <div class="container grid grid-cols-5 gap-2 p-3 md:flex md:flex-col md:justify-center md:items-start md:w-2/6">
+              <div class="flex flex-col items-center px-5 py-2 rounded-xl shadow-lg bg-zinc-300 max-w-[103px]">
+                <img loading="lazy" src="./../assets/images/bracelet-2.png" />
+              </div>
+              <div class="flex flex-col items-center px-5 py-2 rounded-xl shadow-lg bg-zinc-300 max-w-[103px]">
+                <img loading="lazy" src="./../assets/images/bracelet-2.png" />
+              </div>
+              <div class="flex flex-col items-center px-5 py-2 rounded-xl shadow-lg bg-zinc-300 max-w-[103px]">
+                <img loading="lazy" src="./../assets/images/bracelet-2.png" />
+              </div>
+              <div class="flex flex-col items-center px-5 py-2 rounded-xl shadow-lg bg-zinc-300 max-w-[103px]">
+                <img loading="lazy" src="./../assets/images/bracelet-2.png" />
+              </div>
+              <div class="flex flex-col items-center px-5 py-2 rounded-xl shadow-lg bg-zinc-300 max-w-[103px]">
+                <img loading="lazy" src="./../assets/images/bracelet-2.png" />
+              </div>
+            </div>
+          </div>
+      
+          <!-- Main Content Section -->
+          <div class="w-full md:w-2/6">
+            <div class="flex justify-end flex-1 md:hidden">
+              <h1 class="pr-10 text-xl font-bold">฿498</h1>
+            </div>
+      
+            <main class="flex flex-col justify-center md:bg-orange-100 md:my-8 md:px-12 md:rounded-r-xl">
+              <!-- Product Info -->
+              <div class="flex justify-center">
+                <div class="text-center">
+                  <h1 class="text-3xl font-bold">ต่างหูบูชาเทพเจ้า</h1>
+                  <p class="text-sm">คำบรรยายเล็กน้อยมาก ๆ ที่ดูดีและจริงใจ</p>
+                  <div class="flex justify-center gap-2">
+                    <img src="./../assets/icon/star-regular.svg" alt="">
+                    <img src="./../assets/icon/star-regular.svg" alt="">
+                    <img src="./../assets/icon/star-regular.svg" alt="">
+                    <img src="./../assets/icon/star-regular.svg" alt="">
+                    <img src="./../assets/icon/star-regular.svg" alt="">
+                    <p>4.9</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Color Options -->
+              <div class="flex justify-center gap-5 px-5 py-5">
+                <div class="shrink-0 bg-rose-400 rounded-full border border-black h-[31px] w-[33px] shadow-2xl shadow-black transition-shadow duration-300 hover:shadow-[0_10px_25px_rgba(0,0,0,0.6)]"></div>
+                <div class="shrink-0 bg-red-800 rounded-full border border-black h-[31px] w-[33px] shadow-2xl shadow-black transition-shadow duration-300 hover:shadow-[0_10px_25px_rgba(0,0,0,0.6)]"></div>
+                <div class="shrink-0 bg-amber-300 rounded-full border border-black h-[31px] w-[33px] shadow-2xl shadow-black transition-shadow duration-300 hover:shadow-[0_10px_25px_rgba(0,0,0,0.6)]"></div>
+              </div>
+      
+              <!-- Purchase Buttons -->
+              <div class="flex flex-col max-w-[323px] mx-20 mb-2">
+                <div class="w-full bg-lime-200 shadow-sm min-h-[57px] rounded-[250px] flex justify-center items-center">
+                  <button class="flex items-center justify-center h-full gap-2 font-bold">
+                    <img src="./../assets/icon/hand-holding-dollar-solid.svg" alt="">
+                    ซื้อเลย
+                  </button>
+                </div>
+                <div class="mt-3.5 w-full shadow-sm bg-zinc-300 min-h-[57px] rounded-[250px] flex justify-center items-center">
+                  <button class="flex items-center justify-center h-full gap-2 font-bold">
+                    <img src="./../assets/icon/cart-shopping-solid.svg" alt="">
+                    ใส่ลงตะกร้า
+                  </button>
+                </div>
+              </div>
+      
+              <!-- Additional Info -->
+              <div class="flex flex-1 gap-4 pt-4 pl-4">
+                <button class="flex items-center gap-2 px-4 py-1 font-bold rounded-lg bg-primary-200">
+                  รายละเอียด
+                </button>
+                <button class="flex items-center gap-2 px-4 py-1 font-bold rounded-lg bg-secondary-200">
+                  คำทำนาย
+                </button>
+                <button class="flex items-center gap-2 px-4 py-1 font-bold rounded-lg bg-secondary-200">
+                  รีวิว
+                </button>
+              </div>
+      
+              <!-- Text Input -->
+              <div class="h-40 px-4 py-1 mt-4 mb-4 ml-4 bg-primary-300 rounded-tr-3xl"">
+
+              </div>
+            </main>
+          </div>
+        </div>
+      </body>
+      
+</html>

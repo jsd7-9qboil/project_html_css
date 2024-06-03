@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: 'Kanit', sans-serif;
+      }
+    </style>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              text: {
+                50: '#e5e5ff',
+                100: '#ccccff',
+                200: '#9999ff',
+                300: '#6666ff',
+                400: '#3333ff',
+                500: '#0000ff',
+                600: '#0000cc',
+                700: '#000099',
+                800: '#000066',
+                900: '#000033',
+                950: '#00001a',
+              },
+              background: {
+                50: '#f2f2f2',
+                100: '#e6e6e6',
+                200: '#cccccc',
+                300: '#b3b3b3',
+                400: '#999999',
+                500: '#808080',
+                600: '#666666',
+                700: '#4d4d4d',
+                800: '#333333',
+                900: '#1a1a1a',
+                950: '#0d0d0d',
+              },
+              primary: {
+                50: '#fff7e5',
+                100: '#ffeecc',
+                200: '#ffdd99',
+                300: '#ffcc66',
+                400: '#ffbb33',
+                500: '#ffaa00',
+                600: '#cc8800',
+                700: '#996600',
+                800: '#664400',
+                900: '#332200',
+                950: '#1a1100',
+              },
+              secondary: {
+                50: '#f7eafb',
+                100: '#eed5f6',
+                200: '#deabed',
+                300: '#cd81e4',
+                400: '#bc57db',
+                500: '#ac2dd2',
+                600: '#8924a8',
+                700: '#671b7e',
+                800: '#451254',
+                900: '#22092a',
+                950: '#110415',
+              },
+              accent: {
+                50: '#fff9e5',
+                100: '#fff4cc',
+                200: '#ffe999',
+                300: '#ffde66',
+                400: '#ffd333',
+                500: '#ffc800',
+                600: '#cca000',
+                700: '#997800',
+                800: '#665000',
+                900: '#332800',
+                950: '#1a1400',
+              },
+            },
+            fontSize: {
+              sm: '0.750rem',
+              base: '1rem',
+              xl: '1.333rem',
+              '2xl': '1.777rem',
+              '3xl': '2.369rem',
+              '4xl': '3.158rem',
+              '5xl': '4.210rem',
+            },
+            fontWeight: {
+              normal: '400',
+              bold: '700',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body data-theme="light">
+    <!-- Navbar -->
+    <nav class="bg-stone-100 border-gray-200">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="https://flowbite.com/"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="./../assets/images/logo.png"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+          <span class="self-center text-l font-semibold whitespace-nowrap"
+            >mootayloo</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-stone-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-stone-100"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-black rounded md:t md:text-blue-700 md:p-0"
+                aria-current="page"
+                >หน้าแแรก</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >สินค้า</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >ดูดวง</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >ค้นหา</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >ติดต่อเรา</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--!Main-->
+    <main>
+      <!-- Search -->
+      <section class="my-4 px-4 md:hidden">
+        <div class="container mx-auto">
+          <label class="input input-bordered flex items-center gap-2">
+            <input type="text" class="grow" placeholder="Search" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="w-4 h-4 opacity-70"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+        </div>
+      </section>
+
+      <!-- Title + Filter -->
+      <section class="my-4 px-4">
+        <div class="container mx-auto">
+          <!-- Breadcrumbs -->
+          <div class="text-sm breadcrumbs">
+            <ul>
+              <li><a class="font-medium">สินค้าทั้งหมด</a></li>
+              <li><a class="font-medium">ต่างหู</a></li>
+            </ul>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-2xl font-bold uppercase pt-2">ต่างหู</h1>
+          <p class="text-slate-500">เสริมสร้างดวงของคุณให้ cute กว่าใคร</p>
+
+          <!-- Filter -->
+          <div class="py-6 w-full flex gap-2">
+            <div
+              class="badge bg-primary-500 rounded-lg hover:bg-primary-700 hover:scale-105 transition transform duration-200 px-4 py-2 cursor-pointer"
+            >
+              สวยน่ารัก
+            </div>
+            <div
+              class="badge bg-secondary-500 text-white rounded-lg hover:bg-secondary-700 hover:scale-105 transition transform duration-200 px-4 py-2 cursor-pointer"
+            >
+              เรียบหรู
+            </div>
+            <div
+              class="badge bg-secondary-500 text-white rounded-lg hover:bg-secondary-700 hover:scale-105 transition transform duration-200 px-4 py-2 cursor-pointer"
+            >
+              Filter A
+            </div>
+          </div>
+
+          <!-- Products gird -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 pb-8">
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/necklace-2.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">ดาวสกายเทวานฤมิตร</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/necklace-1.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">สร้อย A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/earring-2.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">แหวนทองคำมรกต</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/earring-1.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/bracelet-4.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/bracelet-3.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/bracelet-2.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-[200px] h-[320px] relative">
+              <!-- behind frame -->
+              <div
+                class="w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute top-0 right-0"
+              ></div>
+              <!-- front card -->
+              <div
+                class="bg-primary-100 w-[180px] h-[300px] border-2 rounded-tr-3xl rounded-bl-3xl absolute bottom-0"
+              >
+                <!-- Thumbnail -->
+                <figure>
+                  <img src="./../assets/images/bracelet-1.png" alt="" />
+                </figure>
+                <!-- Body -->
+                <div class="w-full h-fit flex flex-col items-center py-2">
+                  <h2 class="text-lg font-bold">Product A</h2>
+                  <p class="text-slate-500 text-base">$100</p>
+                  <button
+                    class="bg-secondary-200 py-2 px-4 my-2 rounded-tr-3xl rounded-bl-3xl"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

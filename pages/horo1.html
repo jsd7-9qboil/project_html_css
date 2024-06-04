@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Horoscope</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
       rel="stylesheet"
@@ -11,7 +11,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-purple-100">
+  <body class="bg-purple-200">
     <header>
       <div class="navbar bg-base-100 hidden md:flex">
         <div class="navbar-start">
@@ -232,84 +232,101 @@
         </div>
       </div>
     </header>
-    <main class="flex flex-col justify-center items-center">
-      <div class="justify-center items-center mt-4">
-        <img src="../assets/images/icon.png" alt="icon" class="w-20" />
+    <main>
+      <div class="my-8 text-center">
+        <img src="" alt="" class="justify-center" />
+        <h1 class="text-2xl lg:text-4xl text-purple-600">ดูดวง 12 ราศี</h1>
       </div>
-      <div class="justify-center items-center">
-        <h1 class="text-3xl text-2xl">Mutayloo</h1>
-      </div>
-      <div
-        class="bg-white ml-10 mr-10 px-8 py-8 rounded-lg shadow-md w-96 border-2 border-violet-300 justify-center items-center mt-4 mx-10"
-      >
-        <h2 class="text-2xl font-semibold mb-4 text-center">เข้าสู่ระบบ</h2>
-        <form class="justify-center item-center">
-          <div class="mb-4">
-            <label for="username_or_email" class="block text-gray-700"
-              >ชื่อผู้ใช้ หรือ อีเมล</label
-            >
-            <input
-              type="text"
-              class="border-2 border-violet-900 hover:border-violet-400 rounded w-full py-2 px-4"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="password" class="block text-gray-700">รหัสผ่าน</label>
-            <input
-              class="border-2 border-violet-900 hover:border-violet-400 rounded w-full py-2 px-4"
-            />
-          </div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-2" />
-              <label for="remember_me" class="text-gray-700">จำฉันไว้</label>
-            </div>
-          </div>
-          <div class="text-center">
-            <button
-              type="submit"
-              class="w-full bg-violet-600 text-white py-2 px-4 rounded-md hover:bg-violet-900"
-            >
-              เข้าสู่ระบบ
-            </button>
-            <a href="#" class="text-blue-600 hover:underline">ลืมรหัสผ่าน?</a>
-          </div>
-        </form>
-        <div class="mt-4">
-          <p class="text-gray-600 mb-2 text-center">หรือ</p>
-          <div>
-            <button
-              class="flex items-center justify-center w-full bg-violet-100 text-black py-2 px-4 mb-4 rounded-md hover:bg-violet-500"
-            >
-              <img
-                src="../assets/icon/facebook-color-svgrepo-com.svg"
-                alt="facebook"
-                class="h-5 w-5"
-              />
-
-              <span class="ml-4">Sign in with Facebook</span>
-            </button>
-            <button
-              class="flex items-center justify-center w-full bg-violet-100 text-black py-2 px-2 rounded-md hover:bg-red-400"
-            >
-              <img
-                src="../assets/icon/Google__G__logo.svg.png"
-                alt="Google"
-                class="h-5 w-5"
-              />
-              <span class="ml-4">Sign in with Google</span>
-            </button>
-          </div>
+      <div class="grid grid-cols-3 lg:grid lg:grid-cols-4 gap-2  lg:ml-44 mx-4 md:ml-32">
+        <div class="w-full">
+          <a href="./horo1-1.html" target="_blank"
+            ><img src="../assets/icon/aries.svg" alt="aries" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีเมษ</p>
+          <p class="hidden lg:block md:block">13 เม.ย.-13 พ.ค.</p>
         </div>
-        <div class="flex flex-col mt-4 text-center">
-          <p class="text-gray-600 mr-4">ยังไม่เคยเป็นสมาชิกใช่หรือไม่</p>
-          <a href="#" class="text-red-500 hover:underline">สมัครสมาชิกใหม่</a>
+        <div>
+          <a href="./horo1-2.html" target="_blank"
+            ><img src="../assets/icon/taurus.svg" alt="taurus" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีพฤษภ</p>
+          <p class="hidden lg:block md:block">13 พ.ค.- 13 มิ.ย.</p>
+        </div>
+        <div>
+          <a href="./horo1-3.html" target="_blank"
+            ><img src="../assets/icon/gemini.svg" alt="gemini" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีเมถุน</p>
+          <p class="hidden lg:block md:block" >14 มิ.ย.- 14 ก.ค.</p>
+        </div>
+        <div>
+          <a href="./horo1-4.html" target="_blank"
+            ><img src="../assets/icon/cancer.svg" alt="cancer" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีกรกฎ</p>
+          <p class="hidden lg:block md:block">15 ก.ค.-16 ส.ค.</p>
+        </div>
+        <div>
+          <a href="./horo1-5.html" target="_blank"
+            ><img src="../assets/icon/leo.svg" alt="leo" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีสิงห์</p>
+          <p class="hidden lg:block md:block">17 ส.ค.- 16 ก.ย.</p>
+        </div>
+        <div>
+          <a href="./horo1-6.html" target="_blank"
+            ><img src="../assets/icon/virgo.svg" alt="virgo" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีกันย์</p>
+          <p class="hidden lg:block md:block">17 ก.ย.- 16 ต.ค.</p>
+        </div>
+        <div>
+          <a href="./horo1-7.html" target="_blank"
+            ><img src="../assets/icon/libra.svg" alt="libra" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีตุลย์</p>
+          <p class="hidden lg:block md:block">17 ต.ค.- 15 พ.ย.</p>
+        </div>
+        <div>
+          <a href="./horo1-8.html" target="_blank"
+            ><img src="../assets/icon/scorpio.svg" alt="scorpio" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีพิจิก</p>
+          <p class="hidden lg:block md:block">16 พ.ย. - 15 ธ.ค.</p>
+        </div>
+        <div>
+          <a href="./horo1-9.html" target="_blank"
+            ><img src="../assets/icon/sagittarius.svg" alt="sagittarius" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีธนู</p>
+          <p class="hidden lg:block md:block">16 ธ.ค.- 13 ม.ค.</p>
+        </div>
+        <div>
+          <a href="./horo1-10.html" target="_blank"
+            ><img src="../assets/icon/capricorn.svg" alt="capricorn" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีมังกร</p>
+          <p class="hidden lg:block md:block">14 ม.ค.- 12 ก.พ.</p>
+        </div>
+        <div>
+          <a href="./horo1-11.html" target="_blank"
+            ><img src="../assets/icon/aquarius.svg" alt="aquarius" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีกุมภ์</p>
+          <p class="hidden lg:block md:block">13 ก.พ.- 13 มี.ค.</p>
+        </div>
+        <div>
+          <a href="./horo1-12.html" target="_blank"
+            ><img src="../assets/icon/pisces.svg" alt="pisces" class="w-20 lg:w-50"
+          /></a>
+          <p class="pl-6">ราศีมีน</p>
+          <p class="hidden lg:block md:block">14 มี.ค.- 12 เม.ย.</p>
         </div>
       </div>
     </main>
-    <footer class="md:bg-purple-100">
-      <div class="flex justify-end border-slate-200">
-        <p class="py-10 px-20 md:pt-48">©️ 2024 Mutayloo by 9qboil</p>
+    <footer class="bg-purple-200">
+      <div class="flex justify-center lg:justify-end lg:mr-10 lg:pt-10">
+        <p class="pt-20 pb-10 lg:pb-20 md:pb-28 md:pt-48">©️ 2024 Mutayloo by 9qboil</p>
       </div>
     </footer>
   </body>

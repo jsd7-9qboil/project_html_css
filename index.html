@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Hind+Vadodara:wght@300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />  
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!--<div>
+        <h1>Mutayloo</h1>
+      </div>-->
+  <header>
+    <div class="navbar bg-base-100 hidden md:flex">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Homepage</a></li>
+            <li>
+              <a>Shop</a>
+              <ul class="p-2">
+                <li><a>Products</a></li>
+                <li><a>Horoscope</a></li>
+                <li><a>Custom Fate</a></li>
+              </ul>
+            </li>
+            <li><a>Contact</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">MutayLoo</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Homepage</a></li>
+          <li>
+            <details>
+              <summary>Shop</summary>
+              <ul class="p-2">
+                <li><a>Products</a></li>
+                <li><a>Horoscope</a></li>
+                <li><a>Custom Fate</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a>Contact</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span class="badge badge-sm indicator-item">8</span>
+            </div>
+          </div>
+          <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+            <div class="card-body">
+              <span class="font-bold text-lg">8 Items</span>
+              <span class="text-info">Subtotal: $999</span>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-block">View cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img alt="Tailwind CSS Navbar component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            </div>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li>
+              <a class="justify-between">
+                Profile
+                <span class="badge">New</span>
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--!Nav mobile-->
+    <div class="navbar bg-base-100 md:hidden">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Homepage</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Horoscope</a></li>
+            <li><a>Contact</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost text-xl">MutayLoo</a>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-square btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            class="inline-block w-5 h-5 stroke-current">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+        <button class="btn btn-square btn-ghost ml-2">
+          <div class="indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+            <span class="badge badge-sm indicator-item">8</span>
+          </div>
+        </button>
+        <div class="navbar-end">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!--hero mobile-->
+    <section class="md:hidden bg-red-100 p-6">
+      <div
+        class="border border-1 outline outline-2 rounded-[40%] rounded-br-none rounded-tl-none outline-amber-300 px-10 py-10">
+        <div class="container mx-auto flex flex-col md:justify-between md:items-center">
+          <div class="flex flex-col">
+            <h1 class="basis-1/6 font-bold text-left">"เลือกเครื่องประดับ<br>ตามราศีได้ที่นี่"</h1>
+
+            <div class="flex justify-center items-center">
+              <img class="basis-4/6 w-[50%] h-[50%]" src="./assets/images/mutayloo_hero.png" alt="" />
+            </div>
+
+            <h2 class="basis-1/6 font-bold text-right">เครื่องประดับสายมูที่สาวๆ<br>ต้องเป็นเจ้าของ</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- hero desktop-->
+    <section class="md:block hidden md:bg-red-100">
+      <div class="md:container md:mx-auto md:flex md:justify-between md:items-center">
+        <div class="md:container md:flex flex-col">
+          <h1 class="font-bold text-5xl pb-10 pr-5">"เลือกเครื่องประดับตามราศีได้ที่นี่"</h1>
+          <h2 class="text-3xl">เครื่องประดับสายมูที่สาวๆ ทุกคนต้องเป็นเจ้าของ</h2>
+        </div>
+        <div class="border border-1 outline outline-2 rounded-[45%] rounded-br-none rounded-tl-none outline-amber-300">
+          <img class="h-[50%]" src="./assets/images/mutayloo_hero.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      
+    </section>
+
+    
+
+    <!-- Our Products -->
+    <section></section>
+
+    <!-- Testimonials -->
+    <section></section>
+  </main>
+
+  <!-- Footer -->
+  <footer></footer>
+</body>
+
+</html>
